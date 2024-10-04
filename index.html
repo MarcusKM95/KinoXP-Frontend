@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .user-list {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
+<h1>Brugeradministration</h1>
+
+<h2>Registrer bruger</h2>
+<form id="registerForm">
+    <input type="text" id="registerUsername" placeholder="Brugernavn" required>
+    <input type="password" id="registerPassword" placeholder="Adgangskode" required>
+    <input type="email" id="registerEmail" placeholder="Email" required>
+    <button type="submit">Registrer</button>
+</form>
+
+<h2>Log ind</h2>
+<form id="loginForm">
+    <input type="text" id="loginUsername" placeholder="Brugernavn" required>
+    <input type="password" id="loginPassword" placeholder="Adgangskode" required>
+    <button type="submit">Log ind</button>
+</form>
+
+<h2>Alle brugere</h2>
+<button id="getAllUsers">Hent alle brugere</button>
+<div class="user-list" id="userList"></div>
+
+<h2>Opdater bruger</h2>
+<form id="updateForm">
+    <input type="text" id="updateUserId" placeholder="Bruger ID" required>
+    <input type="text" id="updateUsername" placeholder="Nyt brugernavn" required>
+    <input type="email" id="updateEmail" placeholder="Nyt email" required>
+    <button type="submit">Opdater</button>
+</form>
+
+<h2>Slet bruger</h2>
+<form id="deleteForm">
+    <input type="text" id="deleteUserId" placeholder="Bruger ID" required>
+    <button type="submit">Slet</button>
+</form>
+
+<script src="js/login.js"></script> <!-- Link to your external JS file -->
 </body>
 </html>
