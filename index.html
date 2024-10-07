@@ -1,90 +1,44 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Management</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #333;
-        }
-        form {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-        input[type="text"], input[type="password"], input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .user-list {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-    </style>
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container">
+    <h1>User Authentication</h1>
 
-<h1>Brugeradministration</h1>
+    
+    <div class="form-container">
+        <!-- Login Form -->
+        <div id="login-form" class="form">
+            <h2>Login</h2>
+            <form id="login">
+                <input type="text" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <span id="show-register">Register here</span></p>
+        </div>
 
-<h2>Registrer bruger</h2>
-<form id="registerForm">
-    <input type="text" id="registerUsername" placeholder="Brugernavn" required>
-    <input type="password" id="registerPassword" placeholder="Adgangskode" required>
-    <input type="email" id="registerEmail" placeholder="Email" required>
-    <button type="submit">Registrer</button>
-</form>
+        <!-- Registration Form -->
+        <div id="registration-form" class="form hidden">
+            <h2>Register</h2>
+            <form id="register">
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="text" id="registerAddress" placeholder="Address" required>
+                <input type="text" id="registerPhone" placeholder="Phone Number" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <span id="show-login">Login here</span></p>
+        </div>
+    </div>
+</div>
 
-<h2>Log ind</h2>
-<form id="loginForm">
-    <input type="text" id="loginUsername" placeholder="Brugernavn" required>
-    <input type="password" id="loginPassword" placeholder="Adgangskode" required>
-    <button type="submit">Log ind</button>
-</form>
-
-<h2>Alle brugere</h2>
-<button id="getAllUsers">Hent alle brugere</button>
-<div class="user-list" id="userList"></div>
-
-<h2>Opdater bruger</h2>
-<form id="updateForm">
-    <input type="text" id="updateUserId" placeholder="Bruger ID" required>
-    <input type="text" id="updateUsername" placeholder="Nyt brugernavn" required>
-    <input type="email" id="updateEmail" placeholder="Nyt email" required>
-    <button type="submit">Opdater</button>
-</form>
-
-<h2>Slet bruger</h2>
-<form id="deleteForm">
-    <input type="text" id="deleteUserId" placeholder="Bruger ID" required>
-    <button type="submit">Slet</button>
-</form>
-
-<script src="js/login.js"></script> <!-- Link to your external JS file -->
+<script src="js/script.js"></script>
 </body>
 </html>
