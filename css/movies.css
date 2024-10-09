@@ -70,3 +70,17 @@ body {
 .movie-card button:hover {
     background-color: #0056b3;
 }
+
+.delete-button {
+    background-color: #d9534f;  /* Red color to indicate delete action */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}

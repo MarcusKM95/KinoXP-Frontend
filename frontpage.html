@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/frontpage.css">
+    <title>Cinema Homepage</title>
+</head>
+<body>
+<!-- Header with logo and drop-down menu -->
+<header>
+    <div class="logo">
+        <img src="http://localhost:8080/images/KinoXPPP.jpg" alt="KinoXP Logo">
+    </div>
+    <nav>
+        <select onchange="window.location.href=this.value">
+            <option value="#">Select a page</option>
+            <option value="homepage.html">Homepage</option>
+            <option value="schedule.html">Schedule</option>
+            <option value="about-us.html">About Us</option>
+            <option value="contact.html">Contact</option>
+        </select>
+    </nav>
+</header>
+
+<!-- Main section with featured movies -->
+<main>
+    <section class="selected-movies">
+        <h1>Featured Movies</h1>
+        <div class="movie-list">
+            <article class="movie">
+                <img src="movie1.jpg" alt="Movie 1">
+                <h3>Movie 1 Title</h3>
+                <p>Short description of the movie...</p>
+                <span class="release-date">Release Date: 2024-10-15</span>
+                <button>Buy Tickets</button>
+            </article>
+            <article class="movie">
+                <img src="movie2.jpg" alt="Movie 2">
+                <h3>Movie 2 Title</h3>
+                <p>Short description of the movie...</p>
+                <span class="release-date">Release Date: 2024-11-01</span>
+                <button>Buy Tickets</button>
+            </article>
+            <article class="movie">
+                <img src="movie3.jpg" alt="Movie 3">
+                <h3>Movie 3 Title</h3>
+                <p>Short description of the movie...</p>
+                <span class="release-date">Release Date: 2024-12-10</span>
+                <button>Buy Tickets</button>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- Footer with contact information -->
+<footer>
+    <div class="contact-info">
+        <h4>Contact Us</h4>
+        <p>Address: Cinema Street 123, 4000 Copenhagen</p>
+        <p>Phone: +45 12 34 56 78</p>
+        <p>Email: info@cinema.com</p>
+    </div>
+</footer>
+
+<script src="frontpage.js"></script>
+</body>
+</html>

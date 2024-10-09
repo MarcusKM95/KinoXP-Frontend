@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Movie</title>
+  <link rel="stylesheet" href="css/createMovieForm.css">
+</head>
+<body>
+<div class="movie-section">
+  <h2>Create a New Movie</h2>
+  <form id="movieForm">
+    <div class="form-group">
+      <label for="title">Movie Title</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="instructor">Instructor (Director)</label>
+      <input type="text" id="instructor" name="instructor" required>
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input type="date" id="releaseDate" name="releaseDate" required>
+    </div>
+    <div class="form-group">
+      <label for="durationMinutes">Duration (Minutes)</label>
+      <input type="number" id="durationMinutes" name="durationMinutes" min="1" required>
+    </div>
+    <div class="form-group">
+      <label for="ageLimit">Age Limit</label>
+      <input type="number" id="ageLimit" name="ageLimit" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="basePrice">Base Price</label>
+      <input type="number" id="basePrice" name="basePrice" step="0.01" required>
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre" required>
+        <option value="HORROR">Horror</option>
+        <option value="ROMANCE">Romance</option>
+        <option value="COMEDY">Comedy</option>
+        <option value="ACTION">Action</option>
+        <option value="ADVENTURE">Adventure</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="is3D">3D Movie?</label>
+      <select id="is3D" name="is3D" required>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="isAllNighter">All-Nighter?</label>
+      <select id="isAllNighter" name="isAllNighter" required>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="poster">Poster Image:</label>
+      <input type="file" id="poster" name="poster" accept="image/*" required />
+    </div>
+    <button type="button" onclick="submitMovieForm()">Create Movie</button>
+  </form>
+</div>
+<script src="js/createMovieForm.js"></script>
+</body>
+</html>
