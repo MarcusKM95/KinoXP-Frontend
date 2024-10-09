@@ -1,4 +1,4 @@
-const loginURL = 'http://localhost:8080/users/login'
+const userURL = 'http://localhost:8080/users'
 // Handle login form submission
 document.getElementById("login").addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -6,7 +6,7 @@ document.getElementById("login").addEventListener("submit", async function (even
     const password = document.getElementById("loginPassword").value;
     console.log(email, password);
     // Fetch request for login
-    fetch(loginURL, {
+    fetch(userURL+"/login" , {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ document.getElementById("register").addEventListener("submit", function(event) {
     const password = document.getElementById("registerPassword").value;
 
     // Fetch request for registration
-    fetch('/users/register', {
+    fetch(userURL+'/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
