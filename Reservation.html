@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmreservationssystem</title>
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="css/seats.css">
+</head>
+<body>
+
+<!-- Login Section -->
+<section id="loginSection">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="username">Brugernavn:</label>
+    <input type="text" id="username" name="username" required aria-describedby="usernameHelp">
+    <span id="usernameHelp" class="helper-text">Indtast dit brugernavn.</span><br>
+
+    <label for="password">Adgangskode:</label>
+    <input type="password" id="password" name="password" required aria-describedby="passwordHelp">
+    <span id="passwordHelp" class="helper-text">Indtast din adgangskode.</span><br>
+
+    <button type="submit">Login</button>
+  </form>
+  <button id="guestButton">Fortsæt som gæst</button>
+</section>
+
+<!-- Main Reservation Content -->
+<div id="mainContent" style="display:none;">
+  <h1>Reservér Billetter</h1>
+
+  <!-- Filmvalg -->
+  <h1>Vælg din film og showtime</h1>
+
+  <div>
+    <label for="movieSelect">Vælg en film:</label>
+    <select id="movieSelect" required>
+      <option value="" disabled selected>Vælg en film</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="showtimeSelect">Vælg en showtime:</label>
+    <select id="showtimeSelect" required>
+      <option value="" disabled selected>Vælg en showtime</option>
+    </select>
+  </div>
+
+  <!-- Add the 'Next' button here -->
+  <button id="nextButton">Next</button>
+
+  <div id="seatSelection">
+    <h3>Vælg dine sæder:</h3>
+    <div id="seatContainer"></div>
+  </div>
+
+  <div id="selectedSeats">
+    <h3>Valgte sæder:</h3>
+    <ul id="selectedSeatsList"></ul>
+  </div>
+</div>
+
+<section id="reservationSection" style="display:none;">
+  <h3>Bekræftelse af reservation</h3>
+  <p id="responseMessage"></p>
+</section>
+
+<!-- JavaScript -->
+<script src="js/MovieSelection.js"></script>
+<script src="js/SeatSelection.js"></script>
+
+</body>
+</html>
+

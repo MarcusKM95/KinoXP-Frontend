@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>KinoXP Reservation System</title>
+    <link rel="stylesheet" href="css/booking.css"> <!-- Link to external CSS for styling -->
+</head>
+<body>
+<h1>Vælg en Film</h1>
+<div id="movieSelection">
+    <label for="movieSelect">Film:</label>
+    <select id="movieSelect" required>
+        <option value="">Vælg en film</option>
+    </select>
+    <button id="nextButton">Næste</button>
+</div>
+
+<div id="reservationSection" style="display: none;">
+    <h2>Reservér Billetter</h2>
+    <form id="reservationForm">
+        <label for="age">Indtast din alder:</label>
+        <input type="number" id="age" min="0" required>
+
+        <label for="showtimeSelect">Vælg Showtimes:</label>
+        <select id="showtimeSelect" required>
+            <option value="">Vælg en showtime</option>
+        </select>
+
+        <label for="seatIds">Vælg Sæder (Comma-separated IDs):</label>
+        <input type="text" id="seatIds" required placeholder="e.g. 1, 2, 3">
+
+        <button type="submit">Reserver</button>
+    </form>
+    <div id="response"></div> <!-- For displaying messages to the user -->
+</div>
+
+<script src="js/MovieSelection.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Bio-style Screen */
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Showcase for Seat Legends */
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase .seat {
+    background-color: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.showcase .selected {
+    background-color: #6feaf6;
+}
+
+.showcase .occupied {
+    background-color: #e74c3c;
+}
+
+/* Row of Seats */
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.seat {
+    background-color: #444451;
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.selected {
+    background-color: #6feaf6;
+    transform: scale(1.1);
+}
+
+.seat.occupied {
+    background-color: #e74c3c;
+    cursor: not-allowed;
+}
+
+.seat:hover {
+    background-color: #575757;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+/* Screen Label */
+.screen-label {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    color: #555;
+}
+
+/* General Layout Adjustments */
+.movie-container, #reservationSection {
+    margin: 20px;
+}
+
+input, select, button {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+/* CSS for seat selection */
+.seat {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
