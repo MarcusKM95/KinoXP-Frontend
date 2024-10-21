@@ -3,7 +3,7 @@ function submitMovieForm() {
     const formData = new FormData();
     formData.append('file', fileInput.files[0]);
 
-    // First, upload the image file
+    // upload the image file
     fetch('http://localhost:8080/movies/uploadPoster', {
         method: 'POST',
         body: formData

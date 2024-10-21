@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Manager Frontpage</title>
+  <link rel="stylesheet" href="css/movieManagerFrontpage.css">
+</head>
+<body>
+<div class="frontpage-container">
+  <h1>Welcome, Movie Manager</h1>
+  <div class="button-group">
+    <button onclick="navigateTo('movies.html')">Manage Uploaded Movies</button>
+    <button onclick="navigateTo('createMovieForm.html')">Upload a Movie</button>
+  </div>
+</div>
+<script>
+  function navigateTo(page) {
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>
